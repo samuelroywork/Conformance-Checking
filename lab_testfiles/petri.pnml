@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_11">
+        <name>
+          <text>p_11</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_7">
+        <name>
+          <text>p_7</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_10">
+        <name>
+          <text>p_10</text>
+        </name>
+      </place>
+      <place id="p_8">
+        <name>
+          <text>p_8</text>
+        </name>
+      </place>
+      <place id="p_9">
+        <name>
+          <text>p_9</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="skip_6">
+        <name>
+          <text>skip_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f6d0d578-0968-40e2-97b3-0b579110ae50"/>
+      </transition>
+      <transition id="init_loop_2">
+        <name>
+          <text>init_loop_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="318dc93e-f787-4b1c-857e-e1fffab41763"/>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="452e635d-12af-45db-992e-b7b0739fc1f8"/>
+      </transition>
+      <transition id="T06 Determine necessity of stop advice">
+        <name>
+          <text>T06 Determine necessity of stop advice</text>
+        </name>
+      </transition>
+      <transition id="T04 Determine confirmation of receipt">
+        <name>
+          <text>T04 Determine confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="skip_7">
+        <name>
+          <text>skip_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="c9c48957-e4c9-45e7-a252-2191bd69cd41"/>
+      </transition>
+      <transition id="T10 Determine necessity to stop indication">
+        <name>
+          <text>T10 Determine necessity to stop indication</text>
+        </name>
+      </transition>
+      <transition id="T11 Create document X request unlicensed">
+        <name>
+          <text>T11 Create document X request unlicensed</text>
+        </name>
+      </transition>
+      <transition id="loop_3">
+        <name>
+          <text>loop_3</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6f2e94e9-389f-45c6-9b13-79eeca6c392e"/>
+      </transition>
+      <transition id="loop_1">
+        <name>
+          <text>loop_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b4f3680a-3474-413f-8b48-c331dd30d61a"/>
+      </transition>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3ae215a8-19ce-4561-b8ab-e81e6fb82566"/>
+      </transition>
+      <transition id="Confirmation of receipt">
+        <name>
+          <text>Confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="T02 Check confirmation of receipt">
+        <name>
+          <text>T02 Check confirmation of receipt</text>
+        </name>
+      </transition>
+      <transition id="T05 Print and send confirmation of receipt">
+        <name>
+          <text>T05 Print and send confirmation of receipt</text>
+        </name>
+      </transition>
+      <arc id="-9223371888182276604" source="loop_1" target="p_3"/>
+      <arc id="-9223371888182276597" source="p_4" target="T11 Create document X request unlicensed"/>
+      <arc id="148672499215" source="T11 Create document X request unlicensed" target="sink"/>
+      <arc id="148672499348" source="p_7" target="skip_6"/>
+      <arc id="-9223371888182276457" source="p_6" target="skip_4"/>
+      <arc id="-9223371888182276443" source="p_6" target="T06 Determine necessity of stop advice"/>
+      <arc id="148672499376" source="loop_3" target="p_6"/>
+      <arc id="-9223371888182276429" source="p_7" target="T04 Determine confirmation of receipt"/>
+      <arc id="148672499383" source="T04 Determine confirmation of receipt" target="p_10"/>
+      <arc id="-9223371888182276422" source="skip_6" target="p_5"/>
+      <arc id="148672499390" source="p_10" target="loop_3"/>
+      <arc id="-9223371888182276415" source="T06 Determine necessity of stop advice" target="p_8"/>
+      <arc id="-9223371888182276408" source="skip_4" target="p_8"/>
+      <arc id="-9223371888182276387" source="p_8" target="T02 Check confirmation of receipt"/>
+      <arc id="-9223371888182276513" source="p_5" target="T05 Print and send confirmation of receipt"/>
+      <arc id="148672499425" source="T02 Check confirmation of receipt" target="p_9"/>
+      <arc id="148672499299" source="T05 Print and send confirmation of receipt" target="p_11"/>
+      <arc id="-9223371888182276373" source="p_8" target="skip_5"/>
+      <arc id="-9223371888182502803" source="source" target="Confirmation of receipt"/>
+      <arc id="-9223371888182276499" source="p_5" target="skip_7"/>
+      <arc id="148672489967" source="p_3" target="init_loop_2"/>
+      <arc id="148672499439" source="skip_5" target="p_9"/>
+      <arc id="148672499313" source="skip_7" target="p_4"/>
+      <arc id="-9223371888182285838" source="Confirmation of receipt" target="p_3"/>
+      <arc id="-9223371888182276366" source="p_9" target="T10 Determine necessity to stop indication"/>
+      <arc id="-9223371888182276492" source="p_11" target="loop_1"/>
+      <arc id="148672499446" source="T10 Determine necessity to stop indication" target="p_7"/>
+      <arc id="-9223371888182285831" source="init_loop_2" target="p_6"/>
+    </page>
+  </net>
+</pnml>

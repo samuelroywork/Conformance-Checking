@@ -1,0 +1,60 @@
+version: '3.3'
+
+services:
+    pm4pydistr_master:
+      container_name: pm4pydistr_master
+      image: javert899/pm4pydistr:master_docker
+      restart: always
+      environment:
+        pm4pydistrconf: master
+        pm4pydistrport: 5001
+      ports:
+        - "6001:5001"
+      volumes:
+        - ./master:/master
+
+    pm4pydistr_slave1:
+      container_name: pm4pydistr_slave1
+      image: javert899/pm4pydistr:slave_docker
+      restart: always
+      environment:
+        pm4pydistrautohost: 1
+        pm4pydistrautoport: 1
+        pm4pydistrmasterhost: pm4pydistr_master
+        pm4pydistrmasterport: 5001
+      ports:
+        - "6002:5002"
+      volumes:
+        - ./master:/master
+      depends_on:
+        - 'pm4pydistr_master'
+
+    pm4pydistr_slave2:
+      container_name: pm4pydistr_slave2
+      image: javert899/pm4pydistr:slave_docker
+      restart: always
+      environment:
+        pm4pydistrautohost: 1
+        pm4pydistrautoport: 1
+        pm4pydistrmasterhost: pm4pydistr_master
+        pm4pydistrmasterport: 5001
+      ports:
+        - "6003:5003"
+      volumes:
+        - ./master:/master
+      depends_on:
+        - 'pm4pydistr_master'
+
+    pm4pyws_dv:
+      container_name: pm4pyws_dv
+      image: javert899/pm4pyws:pm4pyDistrIntegration
+      restart: always
+      environment:
+        pm4pydistrmasterhost: pm4pydistr_master
+        pm4pydistrmasterport: 5001
+      ports:
+        - "6000:5000"
+      depends_on:
+        - 'pm4pydistr_master'
+        - 'pm4pydistr_slave1'
+        - 'pm4pydistr_slave2'

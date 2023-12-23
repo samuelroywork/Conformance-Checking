@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="n3">
+        <name>
+          <text>n3</text>
+        </name>
+      </place>
+      <place id="n6">
+        <name>
+          <text>n6</text>
+        </name>
+      </place>
+      <transition id="n17">
+        <name>
+          <text>n17</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="66853dbf-b2d1-4f6a-ab3a-ce80e0666fad"/>
+      </transition>
+      <transition id="n21">
+        <name>
+          <text>a</text>
+        </name>
+      </transition>
+      <transition id="n19">
+        <name>
+          <text>e</text>
+        </name>
+      </transition>
+      <transition id="n13">
+        <name>
+          <text>b</text>
+        </name>
+      </transition>
+      <transition id="n15">
+        <name>
+          <text>d</text>
+        </name>
+      </transition>
+      <arc id="-9223371855068269856" source="n6" target="n17"/>
+      <arc id="-9223371855068269852" source="n3" target="n15"/>
+      <arc id="-9223371855068368404" source="n19" target="n6"/>
+      <arc id="-9223371855068269844" source="n6" target="n13"/>
+      <arc id="-9223371855068403920" source="n13" target="n3"/>
+      <arc id="-9223371855068269840" source="n17" target="n3"/>
+      <arc id="-9223371855068368584" source="n21" target="n6"/>
+    </page>
+  </net>
+</pnml>

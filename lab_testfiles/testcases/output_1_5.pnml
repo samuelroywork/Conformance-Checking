@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="node70">
+        <name>
+          <text>node70</text>
+        </name>
+      </place>
+      <place id="node20">
+        <name>
+          <text>node20</text>
+        </name>
+      </place>
+      <transition id="node11">
+        <name>
+          <text>decide+ </text>
+        </name>
+      </transition>
+      <transition id="node13">
+        <name>
+          <text>node13</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="7f6a810b-2669-44a4-bf54-d9c400983e86"/>
+      </transition>
+      <arc id="-9223371855068500628" source="node20" target="node13"/>
+      <arc id="-9223371855068500732" source="node13" target="node70"/>
+      <arc id="-9223371855068500652" source="node11" target="node20"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="node70">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

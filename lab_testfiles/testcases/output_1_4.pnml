@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="node5">
+        <name>
+          <text>node5</text>
+        </name>
+      </place>
+      <transition id="node8">
+        <name>
+          <text>reinitiate request+ </text>
+        </name>
+      </transition>
+      <transition id="node10">
+        <name>
+          <text>reject request+ </text>
+        </name>
+      </transition>
+      <transition id="node11">
+        <name>
+          <text>decide+ </text>
+        </name>
+      </transition>
+      <arc id="-9223371855068353456" source="node5" target="node8"/>
+      <arc id="-9223371855068353480" source="node11" target="node5"/>
+      <arc id="-9223371855068353492" source="node5" target="node10"/>
+    </page>
+  </net>
+</pnml>

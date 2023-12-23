@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="node7">
+        <name>
+          <text>node7</text>
+        </name>
+      </place>
+      <transition id="node10">
+        <name>
+          <text>reject request+ </text>
+        </name>
+      </transition>
+      <arc id="-9223371855068335944" source="node10" target="node7"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="node7">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

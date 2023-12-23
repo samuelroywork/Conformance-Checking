@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="n4">
+        <name>
+          <text>n4</text>
+        </name>
+      </place>
+      <place id="n1">
+        <name>
+          <text>n1</text>
+        </name>
+      </place>
+      <place id="n2">
+        <name>
+          <text>n2</text>
+        </name>
+      </place>
+      <transition id="n18">
+        <name>
+          <text>f</text>
+        </name>
+      </transition>
+      <transition id="n15">
+        <name>
+          <text>d</text>
+        </name>
+      </transition>
+      <transition id="n14">
+        <name>
+          <text>g</text>
+        </name>
+      </transition>
+      <transition id="n19">
+        <name>
+          <text>e</text>
+        </name>
+      </transition>
+      <transition id="n22">
+        <name>
+          <text>h</text>
+        </name>
+      </transition>
+      <transition id="n12">
+        <name>
+          <text>n12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3d7ec43f-f6b3-4149-b4ac-a4feaf7a69f5"/>
+      </transition>
+      <arc id="-9223371855068277408" source="n1" target="n22"/>
+      <arc id="-9223371855068277404" source="n15" target="n1"/>
+      <arc id="-9223371855068277400" source="n1" target="n19"/>
+      <arc id="-9223371855068277396" source="n2" target="n18"/>
+      <arc id="-9223371855068277392" source="n12" target="n2"/>
+      <arc id="-9223371855068277388" source="n12" target="n4"/>
+      <arc id="-9223371855068277384" source="n4" target="n14"/>
+      <arc id="-9223371855068277412" source="n1" target="n12"/>
+    </page>
+  </net>
+</pnml>
